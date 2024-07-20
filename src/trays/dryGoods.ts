@@ -1,0 +1,85 @@
+import { Tray } from '../trays/trayType';
+export const dryGoods: Tray = [
+  {
+    type: 'Dry',
+    img: 'https://www.cfacdn.com/img/order/menu/Online/Trays/cookieTrayLarge_Desk.png',
+    name: 'Cookie Tray',
+    variants: null,
+    utensil: 'Tong',
+    notes: null,
+    sizes: {
+      small: {
+        serving_size: 12,
+        quantity: 12,
+        honey: null,
+        free8oz: null,
+        roasted_almonds: null,
+        dressings: null,
+      },
+      medium: null,
+      large: {
+        serving_size: 24,
+        quantity: 24,
+        honey: null,
+        free8oz: null,
+        roasted_almonds: null,
+        dressings: null,
+      },
+    },
+  },
+  //spacing
+  {
+    type: 'Dry',
+    img: 'https://www.cfacdn.com/img/order/menu/Online/Trays/Brownies_L_800x800.png',
+    name: 'Brownie Tray',
+    variants: null,
+    utensil: 'Tong',
+    notes: null,
+    sizes: {
+      small: {
+        serving_size: 12,
+        quantity: 12,
+        honey: null,
+        free8oz: null,
+        roasted_almonds: null,
+        dressings: null,
+      },
+      medium: null,
+      large: {
+        serving_size: 24,
+        quantity: 24,
+        honey: null,
+        free8oz: null,
+        roasted_almonds: null,
+        dressings: null,
+      },
+    },
+  },
+  {
+    type: 'Dry',
+    img: 'https://www.cfacdn.com/img/order/menu/Online/Trays/Cookies_Brownies_L_800x800.png',
+    name: 'Cookie/Brownie Tray',
+    variants: null,
+    utensil: 'Tong',
+    notes: null,
+    sizes: {
+      small: {
+        serving_size: 12,
+        quantity: 6,
+        honey: null,
+        free8oz: null,
+        roasted_almonds: null,
+        dressings: null,
+      },
+      medium: null,
+      large: {
+        serving_size: 24,
+        quantity: 12,
+        honey: null,
+        free8oz: null,
+        roasted_almonds: null,
+        dressings: null,
+      },
+    },
+  },
+];
