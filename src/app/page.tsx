@@ -3,7 +3,7 @@ import Trays from './components/Trays';
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col'>
+    <main className='flex flex-col'>
       <Trays />
       <Select />
     </main>

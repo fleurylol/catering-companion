@@ -8,7 +8,7 @@ export type Tray = Array<{
   sizes: {
     small: {
       serving_size: number;
-      quantity: number;
+      quantity: number | null;
       honey: number | null;
       free8oz: number | null;
       roasted_almonds: number | null;
@@ -16,7 +16,7 @@ export type Tray = Array<{
     } | null;
     medium: {
       serving_size: number;
-      quantity: number;
+      quantity: number | null;
       honey: number | null;
       free8oz: number | null;
       roasted_almonds: number | null;
@@ -24,7 +24,7 @@ export type Tray = Array<{
     } | null;
     large: {
       serving_size: number;
-      quantity: number;
+      quantity: number | null;
       honey: number | null;
       free8oz: number | null;
       roasted_almonds: number | null;
@@ -44,7 +44,7 @@ export interface TrayInfoProps {
     sizes: {
       small: {
         serving_size: number;
-        quantity: number;
+        quantity: number | null;
         honey: number | null;
         free8oz: number | null;
         roasted_almonds: number | null;
@@ -52,7 +52,7 @@ export interface TrayInfoProps {
       } | null;
       medium: {
         serving_size: number;
-        quantity: number;
+        quantity: number | null;
         honey: number | null;
         free8oz: number | null;
         roasted_almonds: number | null;
@@ -60,7 +60,7 @@ export interface TrayInfoProps {
       } | null;
       large: {
         serving_size: number;
-        quantity: number;
+        quantity: number | null;
         honey: number | null;
         free8oz: number | null;
         roasted_almonds: number | null;
