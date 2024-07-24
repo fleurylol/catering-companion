@@ -87,7 +87,7 @@ export const hotTrays: Tray = [
       },
       large: {
         serving_size: 20,
-        quantity: 0,
+        quantity: null,
         honey: null,
         free8oz: null,
         roasted_almonds: null,
@@ -124,12 +124,12 @@ export const hotTrays: Tray = [
   },
   {
     type: 'Hot',
-    img: 'https://www.cfacdn.com/img/order/COM/Menu_Refresh/Catering/Catering%20Desktop/031417_MacnCheese_SmTray_CateringSize_Prod_CMYK_0038-V4_2880px.png',
+    img: 'https://www.cfacdn.com/img/order/COM/Menu_Refresh/Catering/Catering%20Desktop/GrilledFiletChick_Bundle_Desk.png',
     name: 'Grilled Fillet Bundle',
     variants: null,
     utensil: 'Tong 3x',
     notes:
-      'Includes 10 grilled filets, 10 multigrain buns, 1 Honey Roasted BBQ Sauce',
+      'Includes 10 multigrain buns (repacked in ice bag), 30 half strips of bacon (packed day of), and 10 Honey Roasted BBQ Sauce',
     sizes: {
       small: null,
       medium: {

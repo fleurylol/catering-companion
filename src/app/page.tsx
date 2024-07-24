@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className='flex flex-col'>
       <Trays />
-      <Select />
+      {/* <Select /> */}
     </main>
   );
 }

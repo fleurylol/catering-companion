@@ -1,5 +1,5 @@
 import React from 'react';
-import { hotTrays } from '@/trays/hotTrays';
+import { allTrays } from '@/trays/allTrays';
 import Image from 'next/image';
 import {
   Sheet,
@@ -23,10 +23,9 @@ import { TrayInfoProps } from '@/trays/trayType';
 const Trays = () => {
   return (
     <>
-      <div className='gap-2 p-2 grid grid-cols-3 md:max-w-[400px] m-auto'>
-        {hotTrays.map((tray) => (
-          <div key={tray.name} className='text-pretty size-fit text-center'>
-            <Image src={tray.img} alt={tray.name} width={150} height={150} />
+      <div className='gap-2p-2 grid grid-cols-3 md:max-w-[400px] m-auto text-center'>
+        {allTrays.map((tray) => (
+          <div key={tray.name} className='text-pretty text-center'>
             <TrayInfo tray={tray} />
           </div>
         ))}
@@ -38,10 +37,13 @@ const Trays = () => {
 const TrayInfo: React.FC<TrayInfoProps> = ({ tray }) => {
   return (
     <Sheet>
-      <SheetTrigger>{tray.name}</SheetTrigger>
+      <SheetTrigger className='rounded-xl p-1'>
+        <Image src={tray.img} alt={tray.name} width={150} height={150} />
+        {tray.name}
+      </SheetTrigger>
       <SheetContent side={'bottom'} className='h-[75%] bg-white'>
         <SheetHeader>
-          <SheetTitle>{tray.name}</SheetTitle>
+          <SheetTitle className='text-balance'>{tray.name}</SheetTitle>
           <SheetDescription>
             {tray.variants && <div>Variants - {tray.variants}</div>}
             <div className='flex flex-col items-center'>
@@ -50,50 +52,38 @@ const TrayInfo: React.FC<TrayInfoProps> = ({ tray }) => {
                 <span className='font-semibold'>Utensil: </span>
                 {tray.utensil}
               </div>
-              <Table>
-                {tray.notes && <TableCaption>{tray.notes}</TableCaption>}
-
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Size</TableHead>
-                    <TableHead>Serving</TableHead>
-                    <TableHead>Quantity</TableHead>
-                    {tray.sizes.small?.free8oz && (
-                      <TableHead className='text-nowrap'>8oz Sauce</TableHead>
-                    )}
-                    {tray.sizes.small?.honey && <TableHead>Honey</TableHead>}
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  <TableRow>
-                    {tray.sizes.small && <TableHead>S - 10</TableHead>}
-                    <TableCell>{tray.sizes.small?.serving_size}</TableCell>
-                    <TableCell>{tray.sizes.small?.quantity}</TableCell>
-                    {tray.sizes.small?.free8oz && (
-                      <TableCell>{tray.sizes.small?.free8oz}</TableCell>
-                    )}
-                    {tray.sizes.small?.honey && (
-                      <TableCell>{tray.sizes.small?.honey}</TableCell>
-                    )}
-                  </TableRow>
-                  <TableRow>
-                    {tray.sizes.medium && <TableHead>M - 14</TableHead>}
-                    <TableCell>{tray.sizes.medium?.serving_size}</TableCell>
-                    <TableCell>{tray.sizes.medium?.quantity}</TableCell>
-                    {tray.sizes.small?.free8oz && (
-                      <TableCell>{tray.sizes.small?.free8oz}</TableCell>
-                    )}
-                  </TableRow>
-                  <TableRow>
-                    {tray.sizes.large && <TableHead>L - 16</TableHead>}
-                    <TableCell>{tray.sizes.large?.serving_size}</TableCell>
-                    <TableCell>{tray.sizes.large?.quantity}</TableCell>
-                    {tray.sizes.small?.free8oz && (
-                      <TableCell>{tray.sizes.large?.free8oz}</TableCell>
-                    )}
-                  </TableRow>
-                </TableBody>
-              </Table>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Size</th>
+                    <th>Serving</th>
+                    <th>Quantity</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {tray.sizes.small && (
+                    <tr>
+                      <td>Small</td>
+                      <td>{tray.sizes.small.serving_size}</td>
+                      <td>{tray.sizes.small.quantity}</td>
+                    </tr>
+                  )}
+                  {tray.sizes.medium && (
+                    <tr>
+                      <td>Medium</td>
+                      <td>{tray.sizes.medium.serving_size}</td>
+                      <td>{tray.sizes.medium.quantity}</td>
+                    </tr>
+                  )}
+                  {tray.sizes.large && (
+                    <tr>
+                      <td>Large</td>
+                      <td>{tray.sizes.large.serving_size}</td>
+                      <td>{tray.sizes.large.quantity}</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
             </div>
           </SheetDescription>
         </SheetHeader>

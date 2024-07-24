@@ -11,7 +11,7 @@ export const coldTrays: Tray = [
     sizes: {
       small: {
         serving_size: 5,
-        quantity: 0,
+        quantity: null,
         honey: null,
         free8oz: null,
         roasted_almonds: null,
@@ -28,10 +28,10 @@ export const coldTrays: Tray = [
       medium: null,
       large: {
         serving_size: 10,
-        quantity: 0,
-        honey: 0,
-        free8oz: 0,
-        roasted_almonds: 0,
+        quantity: null,
+        honey: null,
+        free8oz: null,
+        roasted_almonds: null,
         dressings: [
           'Avocado Lime Ranch - 3',
           'Garden Herb Ranch - 3',
@@ -55,7 +55,7 @@ export const coldTrays: Tray = [
     sizes: {
       small: {
         serving_size: 12,
-        quantity: 0,
+        quantity: null,
         honey: null,
         free8oz: null,
         roasted_almonds: null,
@@ -64,7 +64,7 @@ export const coldTrays: Tray = [
       medium: null,
       large: {
         serving_size: 26,
-        quantity: 0,
+        quantity: null,
         honey: null,
         free8oz: null,
         roasted_almonds: null,
@@ -83,23 +83,16 @@ export const coldTrays: Tray = [
     sizes: {
       small: {
         serving_size: 10,
-        quantity: 0,
+        quantity: null,
         honey: null,
         free8oz: null,
         roasted_almonds: null,
         dressings: null,
       },
-      medium: {
-        serving_size: 0,
-        quantity: 0,
-        honey: null,
-        free8oz: null,
-        roasted_almonds: null,
-        dressings: null,
-      },
+      medium: null,
       large: {
         serving_size: 20,
-        quantity: 0,
+        quantity: null,
         honey: null,
         free8oz: null,
         roasted_almonds: null,
@@ -120,9 +113,9 @@ export const coldTrays: Tray = [
       small: {
         serving_size: 6,
         quantity: 6,
-        honey: 0,
-        free8oz: 0,
-        roasted_almonds: 0,
+        honey: null,
+        free8oz: null,
+        roasted_almonds: null,
         dressings: [
           'Avocado Lime Ranch - 1',
           'Garden Herb Ranch - 1',
@@ -136,9 +129,9 @@ export const coldTrays: Tray = [
       medium: {
         serving_size: 10,
         quantity: 10,
-        honey: 0,
-        free8oz: 0,
-        roasted_almonds: 0,
+        honey: null,
+        free8oz: null,
+        roasted_almonds: null,
         dressings: [
           'Avocado Lime Ranch - 1',
           'Garden Herb Ranch - 1',
@@ -152,9 +145,9 @@ export const coldTrays: Tray = [
       large: {
         serving_size: 14,
         quantity: 14,
-        honey: 0,
-        free8oz: 0,
-        roasted_almonds: 20,
+        honey: null,
+        free8oz: null,
+        roasted_almonds: null,
         dressings: [
           'Avocado Lime Ranch - 1',
           'Garden Herb Ranch - 1',
